@@ -41,14 +41,14 @@ public class ProcessServlet extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet ProcessServlet</title>");            
             out.println("</head>");
-            out.println("<body>");
-            out.println(request.getParameter("username"));
+            out.println("<body>");            
             Enumeration<String> names=request.getParameterNames();
             while(names.hasMoreElements()){
-                String name=names.nextElement();
+                String name = names.nextElement();
                 out.print(name+"=");
-                out.print(request.getParameter(name)+"<br>");
+                out.print(request.getParameter(name)+"<br/>");
             }
+//            out.println(request.getParameter("username"));
             out.println("</body>");
             out.println("</html>");
         } finally {
